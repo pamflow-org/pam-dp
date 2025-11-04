@@ -1,0 +1,5 @@
+# pamDP – pamflow Data Package
+
+To ensure technically and semantically standardized results, the **pamflow Data Package** combines the [Frictionless Data Package](https://frictionlessdata.io/) specification with [Taxonomic Databases Working Group (TDWG)](https://www.tdwg.org/) standards. The Frictionless framework standardizes dataset structure and metadata, making data portable, interoperable, and automatically usable across tools, languages, and platforms. TDWG standards, in turn, align the data model with global biodiversity infrastructures such as **GBIF** and **OBIS**, enabling seamless data exchange and long-term preservation.
+
+The design of pamDP is **directly inspired by [CamtrapDP](https://camtrap-dp.tdwg.org/)**, a mature implementation of these principles for camera-trap data that encapsulates community best practices. For passive acoustic monitoring (PAM), only minimal adaptations were necessary, allowing us to **extend CamtrapDP’s structure** where domain-specific adjustments were required. This approach maximizes interoperability, ensures alignment with existing infrastructures, and minimizes redundancy in developing new standards for PAM data.
