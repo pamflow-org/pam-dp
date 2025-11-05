@@ -122,6 +122,15 @@
       "example": "Audiomoth v1.2.0"
     },
     {
+      "name": "recorderConfiguration",
+      "description": "Detailed settings used for data collection (e.g., microphone type, recording schedule).",
+      "type": "string",
+      "constraints": {
+        "required": false
+      },
+      "example": "Internal microphone, continuous recording"
+    },
+    {
       "name": "recorderHeight",
       "description": "Height at which the recorder was deployed. Expressed in meters. Not to be combined with `recorderDepth`.",
       "skos:narrowMatch": [
