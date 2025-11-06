@@ -55,7 +55,7 @@
       "skos:broadMatch": "http://rs.tdwg.org/ac/terms/accessURI",
       "type": "string",
       "constraints": {
-        "required": true,
+        "required": true
       },
       "example": "https://multimedia.agouti.eu/assets/6d65f3e4-4770-407b-b2bf-878983bf9872/file"
     },
