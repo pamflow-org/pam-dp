@@ -26,7 +26,7 @@
     },
     {
       "name": "mediaID",
-      "description": "Identifier of the media file that was classified. Only applicable for media-based observations (`observationLevel` = `media`). Foreign key to `media.mediaID`.",
+      "description": "Identifier of the media file that was classified. Foreign key to `media.mediaID`.",
       "skos:broadMatch": "http://rs.tdwg.org/dwc/terms/associatedMedia",
       "type": "string",
       "constraints": {
@@ -70,16 +70,17 @@
     },
     {
       "name": "observationLevel",
-      "description": "Level at which the observation was classified. `media` for media-based observations that are directly associated with a media file (`mediaID`). These are especially useful for machine learning and don't need to be mutually exclusive (e.g. multiple classifications are allowed). `event` for event-based observations that consider an event (comprising a collection of media files). These are especially useful for ecological research and should be mutually exclusive, so that their `count` can be summed.",
+      "description": "Level at which the observation was classified. `media` for media-based observations that are directly associated with a media file (`mediaID`). These are especially useful for machine learning and don't need to be mutually exclusive (e.g. multiple classifications are allowed). `event` for event-based observations that consider an event (comprising a collection of media files). These are especially useful for ecological research and should be mutually exclusive, so that their `count` can be summed. `interval` for observations that are whithin a certain time interval of a media file (e.g. a bird call within a 5-min audio recording). ",
       "type": "string",
       "constraints": {
         "required": true,
         "enum": [
           "media",
-          "event"
+          "event",
+          "interval"
         ]
       },
-      "example": "media"
+      "example": "interval"
     },
     {
       "name": "observationType",
@@ -183,46 +184,24 @@
       "example": 6.81
     },
     {
-      "name": "bboxTime",
-      "description": "Start time of vocalization in seconds. Used to define a temporal bounding box that encompasses the signal in the media file identified by `mediaID`.",
-      "type": "number",
-      "constraints": {
-        "required": false,
-        "minimum": 0
-      },
-      "example": 3.4
-    },
-    {
-      "name": "bboxFrequency",
-      "description": "Start frequency in Hertz. Used to define a frequency bounding box that encompasses the signal in the media file identified by `mediaID`.",
-      "type": "number",
-      "constraints": {
-        "required": false,
-        "minimum": 0
-      },
-      "example": 1500
-    },
-    {
-      "name": "bboxDuration",
-      "description": "Duration of the signal in seconds. Used to define a temporal bounding box that encompasses the signal in the media file identified by `mediaID`.",
-      "skos:broadMatch": "http://rs.tdwg.org/ac/terms/widthFrac",
-      "type": "number",
-      "constraints": {
-        "required": false,
-        "minimum": 0
-      },
-      "example": 1.4
-    },
-    {
-      "name": "bboxBandwidth",
-      "description": "Signal bandwidth in Hertz. Used to define a frequency bounding box that encompasses the signal in the media file identified by `mediaID`.",
-      "skos:broadMatch": "http://rs.tdwg.org/ac/terms/heightFrac",
+      "name": "frequencyLow",
+      "description": "Lower limit of the frequency range to which the observation applies. Expressed in hertz. Must be lower than frequencyHigh.",
       "type": "number",
       "constraints": {
         "required": false,
         "minimum": 0
       },
       "example": 500
+    },
+    {
+      "name": "frequencyHigh",
+      "description": "Higher limit of the frequency range to which the observation applies. Expressed in hertz. Must be higher than frequencyLow.",
+      "type": "number",
+      "constraints": {
+        "required": false,
+        "minimum": 0
+      },
+      "example": 1500
     },
     {
       "name": "classificationMethod",

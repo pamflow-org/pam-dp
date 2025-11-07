@@ -26,14 +26,15 @@
     },
     {
       "name": "captureMethod",
-      "description": "Method used to capture the media file.",
+      "description": "Method used to capture the media file. `activityDetection` (triggered by detected movement or activity), `recordingSchedule` (captured at set intervals based on a schedule or duty cycle), and `continuous` (recorded without interruption).",
       "skos:broadMatch": "http://rs.tdwg.org/ac/terms/resourceCreationTechnique",
       "type": "string",
       "constraints": {
         "required": false,
         "enum": [
           "activityDetection",
-          "timeLapse"
+          "recordingSchedule",
+          "continuous"
         ]
       },
       "example": "activityDetection"
