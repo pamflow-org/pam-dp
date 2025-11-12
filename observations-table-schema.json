@@ -50,7 +50,7 @@
       "type": "number",
       "constraints": {
         "required": true,
-        "minumum": 0
+        "minimum": 0
       },
       "example": "3.4"
     },
@@ -60,7 +60,7 @@
       "type": "number",
       "constraints": {
         "required": true,
-        "minumum": 0
+        "minimum": 0
       },
       "example": "7.2"
     },
