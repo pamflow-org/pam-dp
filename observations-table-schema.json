@@ -46,27 +46,23 @@
     },
     {
       "name": "eventStart",
-      "description": "Date and time at which the event started. Formatted as an ISO 8601 string with timezone designator (`YYYY-MM-DDThh:mm:ssZ` or `YYYY-MM-DDThh:mm:ss±hh:mm`).",
-      "skos:broadMatch": "http://rs.tdwg.org/dwc/terms/eventDate",
-      "skos:narrowMatch": "http://rs.tdwg.org/ac/terms/startTimestamp",
-      "type": "datetime",
-      "format": "%Y-%m-%dT%H:%M:%S%z",
+      "description": "Start time of the signal, expressed in seconds relative to the beginning of the associated mediaID. Must be lower than eventEnd.",
+      "type": "number",
       "constraints": {
-        "required": true
+        "required": true,
+        "minumum": 0
       },
-      "example": "2020-03-01T22:00:00Z"
+      "example": "3.4"
     },
     {
       "name": "eventEnd",
-      "description": "Date and time at which the event ended. Formatted as an ISO 8601 string with timezone designator (`YYYY-MM-DDThh:mm:ssZ` or `YYYY-MM-DDThh:mm:ss±hh:mm`).",
-      "skos:broadMatch": "http://rs.tdwg.org/dwc/terms/eventDate",
-      "skos:narrowMatch": "http://rs.tdwg.org/ac/terms/endTimestamp",
-      "type": "datetime",
-      "format": "%Y-%m-%dT%H:%M:%S%z",
+      "description": "End time of the signal, expressed in seconds relative to the beginning of the associated mediaID. Must be higher than eventStart.",
+      "type": "number",
       "constraints": {
-        "required": true
+        "required": true,
+        "minumum": 0
       },
-      "example": "2020-04-01T22:00:00Z"
+      "example": "7.2"
     },
     {
       "name": "observationLevel",
@@ -231,11 +227,11 @@
       "description": "Date and time of the (most recent) classification. Formatted as an ISO 8601 string with timezone designator (`YYYY-MM-DDThh:mm:ssZ` or `YYYY-MM-DDThh:mm:ss±hh:mm`).",
       "skos:broadMatch": "http://rs.tdwg.org/dwc/terms/dateIdentified",
       "type": "datetime",
-      "format": "%Y-%m-%dT%H:%M:%S%z",
+      "format": "%Y-%m-%dT%H:%M:%S",
       "constraints": {
         "required": false
       },
-      "example": "2020-08-22T10:25:19Z"
+      "example": "2020-08-22T10:25:19"
     },
     {
       "name": "classificationProbability",
