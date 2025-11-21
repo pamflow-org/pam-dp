@@ -1,0 +1,82 @@
+{
+  "resources": [
+    {
+      "name": "deployments",
+      "path": "deployments.csv",
+      "profile": "tabular-data-resource",
+      "schema": "https://raw.githubusercontent.com/pamflow-org/pam-dp/v0.0.1/deployments-table-schema.json"
+    },
+    {
+      "name": "media",
+      "path": "media.csv",
+      "profile": "tabular-data-resource",
+      "schema": "https://raw.githubusercontent.com/pamflow-org/pam-dp/v0.0.1/media-table-schema.json"
+    },
+    {
+      "name": "observations",
+      "path": "observations.csv",
+      "profile": "tabular-data-resource",
+      "schema": "https://raw.githubusercontent.com/pamflow-org/pam-dp/v0.0.1/observations-table-schema.json"
+    }
+  ],
+  "profile": "https://raw.githubusercontent.com/pamflow-org/pam-dp/v0.0.1/pam-dp-profile.json",
+  "name": "pam-dp-example-dataset",
+  "created": "2025-11-04T11:23:03Z",
+  "title": "Sample from proyect SONABIO in pamDP format",
+  "contributors": [
+    {
+      "title": "Juan Sebastián Ulloa",
+      "role": "contributor",
+      "organization": "Instituto de Investigación de Recursos Naturales Alexander von Humboldt (IAVH)"
+    }
+  ],
+  "description": "This datapackage contains an example datapackage for passive acoustic monitoring data, using a small sample from the SONABIO project in Guaviare, Colombia.",
+  "version": "v0.1.0",
+  "keywords": [
+    "passive acoustic monitoring",
+    "community monitoring",
+    "birds",
+    "community forestry"
+  ],
+  "licenses": [
+    {
+      "name": "CC0-1.0",
+      "scope": "data"
+    },
+    {
+      "path": "http://creativecommons.org/licenses/by/4.0/",
+      "scope": "media"
+    }
+  ],
+  "project": {
+    "id": "23-256",
+    "title": "Sonidos Naturales para la Biodiversidad",
+    "description": "SONABIO aimed to assess the efficacy of sustainable forest management and community forestry practices near the Serranía de Chiribiquete National Natural Park in Guaviare, Colombia. The goal was to reduce deforestation and improve local livelihoods. The monitoring design and field audio recordings were co-created with the local community and a research institution. This dataset is a sample of the original dataset and serves as an example of a Passive Acoustic Monitoring Data Package (pamDP).",
+    "samplingDesign": "targeted",
+    "captureMethod": ["recordingSchedule"],
+    "individualAnimals": false,
+    "observationLevel": ["interval"]
+  },
+  "coordinatePrecision": 0.001,
+  "spatial": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [2.059, -72.920],
+        [2.235, -73.025],
+        [2.117, -72.779],
+        [2.059, -72.920]
+      ]
+    ]
+  },
+  "temporal": {
+    "start": "2024-02-15",
+    "end": "2024-03-06"
+  },
+  "taxonomic": [
+    {
+      "scientificName": "Aves",
+      "taxonRank": "class"
+    }
+  ]
+}
